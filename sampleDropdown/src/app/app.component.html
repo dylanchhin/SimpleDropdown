@@ -1,0 +1,19 @@
+<div>
+
+	<select  [(ngModel)]="lobSelected" required>
+    <option hidden value="" disabled selected>Select Line of Business </option>
+    <option *ngFor="let item of lobType" [value]="item.type">{{item.type}}</option>
+  </select>
+
+	<select  [(ngModel)]="stateSelected" required>
+    	<option hidden value="" disabled selected>Select State </option>
+    	<option *ngFor="let item of stateType" [value]="item.type">{{item.type}}</option>
+  </select>
+
+	<br>
+
+	<button (click)="onClick()">Click to get data</button>
+  	<div>
+		<h1>{{first_name}}</h1>
+	</div>
+</div>
